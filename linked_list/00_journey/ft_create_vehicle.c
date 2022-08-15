@@ -20,7 +20,7 @@ t_vehicle	*ft_create_vehicle(char *type, float price)
 	vehicle = (t_vehicle *) malloc(sizeof(t_vehicle) * 1);
 	if (vehicle == NULL)
 		return (NULL);
-	vehicle -> type = type;
-	vehicle -> price = price;
+	vehicle->type = type;
+	vehicle->price = price;
 	return (vehicle);
 }

@@ -20,8 +20,8 @@ t_trip	*ft_journey_last(t_trip *journey)
 	if (!journey)
 		return (NULL);
 	trip = journey;
-	while (trip -> next)
-		trip = trip -> next;
+	while (trip->next)
+		trip = trip->next;
 	return (trip);
 }
 
@@ -30,14 +30,14 @@ void	ft_journey_add_last(t_trip **journey, t_trip *trip)
 	t_trip	*trip_last;
 
 	trip_last = ft_journey_last(*journey);
-	trip_last -> next = trip;
-	trip -> prev = trip_last;
+	trip_last->next = trip;
+	trip->prev = trip_last;
 }
 
 void	ft_journey_add_first(t_trip **journey, t_trip *trip)
 {
-	trip -> next = *journey;
-	(*journey)-> prev = trip;
+	trip->next = *journey;
+	(*journey)->prev = trip;
 	*journey = trip;
 }
 
@@ -54,12 +54,12 @@ void	ft_journey_add_nth(t_trip **journey, t_trip *trip, int n)
 		trip_prev = *journey;
 		while (n - 2)
 		{
-			trip_prev = trip_prev -> next;
+			trip_prev = trip_prev->next;
 			n--;
 		}
-		(trip_prev -> next)-> prev = trip;
-		trip -> next = trip_prev -> next;
-		trip -> prev = trip_prev;
-		trip_prev -> next = trip;
+		trip_prev->next->prev = trip;
+		trip->next = trip_prev->next;
+		trip->prev = trip_prev;
+		trip_prev->next = trip;
 	}
 }

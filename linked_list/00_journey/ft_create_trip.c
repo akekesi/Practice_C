@@ -25,12 +25,12 @@ t_trip	*ft_create_trip(
 	trip = (t_trip *) malloc(sizeof(t_trip) * 1);
 	if (trip == NULL)
 		return (NULL);
-	trip -> departure = departure;
-	trip -> arrival = arrival;
-	trip -> vehicle = vehicle;
-	trip -> distance = distance;
-	trip -> price = distance * vehicle -> price;
-	trip -> prev = NULL;
-	trip -> next = NULL;
+	trip->departure = departure;
+	trip->arrival = arrival;
+	trip->vehicle = vehicle;
+	trip->distance = distance;
+	trip->price = distance * vehicle->price;
+	trip->prev = NULL;
+	trip->next = NULL;
 	return (trip);
 }

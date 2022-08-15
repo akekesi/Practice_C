@@ -20,9 +20,9 @@ int	ft_journey_ntrips(t_trip **journey)
 
 	trip = *journey;
 	n = 1;
-	while (trip -> next)
+	while (trip->next)
 	{
-		trip = trip -> next;
+		trip = trip->next;
 		n++;
 	}
 	return (n);
@@ -34,11 +34,11 @@ float	ft_journey_cost(t_trip **journey)
 	t_trip	*trip;
 
 	trip = *journey;
-	cost = trip -> price;
-	while (trip -> next)
+	cost = trip->price;
+	while (trip->next)
 	{
-		trip = trip -> next;
-		cost += trip -> price;
+		trip = trip->next;
+		cost += trip->price;
 	}
 	return (cost);
 }
@@ -49,11 +49,11 @@ float	ft_journey_distance(t_trip **journey)
 	t_trip	*trip;
 
 	trip = *journey;
-	distance = trip -> distance;
-	while (trip -> next)
+	distance = trip->distance;
+	while (trip->next)
 	{
-		trip = trip -> next;
-		distance += trip -> distance;
+		trip = trip->next;
+		distance += trip->distance;
 	}
 	return (distance);
 }
